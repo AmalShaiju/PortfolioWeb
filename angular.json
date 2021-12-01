@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "8c0eda3e-235c-473a-8ea6-f4599747ac58"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,9 +34,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/gsap/types/index.d.ts",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/scrollmagic/scrollmagic/minified/scrollmagic.min.js",
+              "node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"
+            ]
           },
           "configurations": {
             "production": {

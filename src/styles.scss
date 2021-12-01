@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+@font-face {
+  font-family: valencia;
+  src: url(assets/fonts/valencia/Valencia.ttf);
+}
+
+.xy-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.font-valencia {
+  font-family: valencia;
+}
+
+
+.full-page{
+    height:100vh;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
