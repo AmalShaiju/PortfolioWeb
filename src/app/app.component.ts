@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portfolio';
 
+  show = false;
+
+  click() {
+    this.show = !this.show
+  }
+
 }
