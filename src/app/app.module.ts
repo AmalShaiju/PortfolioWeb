@@ -4,17 +4,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
 import { ProjectsComponent } from './projects/projects.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { AboutmeComponent } from './aboutme/aboutme.component';
+import { QuotesComponent } from './quotes/quotes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    AboutmeComponent,
+    QuotesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatIconModule,
+    MatTooltipModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

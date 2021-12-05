@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
 import * as ScrollMagic from 'ScrollMagic';
 import "scrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js";
 import { Project } from '../../models/Project';
@@ -25,7 +24,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.controller = new ScrollMagic.Controller();
     this.scene = new ScrollMagic.Scene({
-      duration: 5000,
+      duration: 4500,
       triggerElement: projectSection,
       triggerHook: 0
     }).addIndicators()
@@ -56,46 +55,44 @@ export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
         }
         this.ps.project = this.ps.projects[0];
       }
-      else if (scrollprogress > 0.25 && scrollprogress <= 0.50) {
+      else if (scrollprogress > 0.25 && scrollprogress <= 0.60) {
         if (this.ps.project.title != this.ps.projects[1].title) {
           this.animateOveraly();
         }
         this.ps.project = this.ps.projects[1];
       }
-      else if (scrollprogress > 0.50 && scrollprogress <= 0.75) {
+      else if (scrollprogress > 0.60 && scrollprogress <= 0.9) {
         if (this.ps.project.title != this.ps.projects[2].title) {
           this.animateOveraly();
         }
         this.ps.project = this.ps.projects[2];
       }
-      else if (scrollprogress > 0.75) {
+      else if (scrollprogress > 0.) {
         if (this.ps.project.title != this.ps.projects[3].title) {
           this.animateOveraly();
         }
         this.ps.project = this.ps.projects[3];
       }
 
-      console.log(scrollpos)
       delay += (scrollprogress - delay) * accelamount;
       const tl = gsap.timeline();
-      tl.to("#lap1", { duration: 0.1, top: `${(500 - (5000 * delay))}px` });
-      tl.to("#lap2", { duration: 0.1, top: `${(700 - (5000 * delay))}px`});
-      tl.to("#lap3", { duration: 0.1, top: `${(1000 - (5000 * delay))}px` });
+      tl.to("#lap1", { duration: 0.1, top: `${(500 - (4500 * delay))}px` });
+      tl.to("#lap2", { duration: 0.1, top: `${(700 - (4500 * delay))}px`});
+      tl.to("#lap3", { duration: 0.1, top: `${(1000 - (4500 * delay))}px` });
 
-      tl.to("#lap4", { duration: 0.1, top: `${(1000 - (5000 * delay))}px` });
-      tl.to("#lap5", { duration: 0.1, top: `${(1200 - (5000 * delay))}px` });
-      tl.to("#lap6", { duration: 0.1, top: `${(1500 - (5000 * delay))}px` });
-      tl.to("#lap7", { duration: 0.1, top: `${(1700 - (5000 * delay))}px` });
+      tl.to("#lap4", { duration: 0.1, top: `${(1000 - (4500 * delay))}px` });
+      tl.to("#lap5", { duration: 0.1, top: `${(1200 - (4500 * delay))}px` });
+      tl.to("#lap6", { duration: 0.1, top: `${(1500 - (4500 * delay))}px` });
+      tl.to("#lap7", { duration: 0.1, top: `${(1700 - (4500 * delay))}px` });
 
-      tl.to("#lap8", { duration: 0.1, top: `${(2500 - (5000 * delay))}px` });
-      tl.to("#lap9", { duration: 0.1, top: `${(2700 - (5000 * delay))}px` });
-      tl.to("#lap10", { duration: 0.1, top: `${(3000 - (5000 * delay))}px` });
-      tl.to("#lap11", { duration: 0.1, top: `${(3200 - (5000 * delay))}px` });
+      tl.to("#lap8", { duration: 0.1, top: `${(2500 - (4500 * delay))}px` });
+      tl.to("#lap9", { duration: 0.1, top: `${(2700 - (4500 * delay))}px` });
+      tl.to("#lap10", { duration: 0.1, top: `${(3000 - (4500 * delay))}px` });
+      tl.to("#lap11", { duration: 0.1, top: `${(3200 - (4500 * delay))}px` });
 
-      tl.to("#lap12", { duration: 0.1, top: `${(3700 - (5000 * delay))}px` });
-      tl.to("#lap13", { duration: 0.1, top: `${(3900 - (5000 * delay))}px` });
-      tl.to("#lap14", { duration: 0.1, top: `${(4300 - (5000 * delay))}px` });
-      tl.to("#lap15", { duration: 0.1, top: `${(4300 - (5000 * delay))}px` });
+      tl.to("#lap12", { duration: 0.1, top: `${(3600 - (4500 * delay))}px` });
+      tl.to("#lap13", { duration: 0.1, top: `${(3800 - (4500 * delay))}px` });
+      tl.to("#lap15", { duration: 0.1, top: `${(4100 - (4500 * delay))}px` });
 
     }, 33.3)
   }

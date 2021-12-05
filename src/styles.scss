@@ -10,6 +10,12 @@
   src: url(assets/fonts/valencia/Valencia.ttf);
 }
 
+
+@font-face {
+  font-family: LeagueGothic;
+  src: url(assets/fonts/league-gothic/LeagueGothic-Regular.otf);
+}
+
 .xy-center{
     display:flex;
     justify-content:center;
@@ -30,3 +36,6 @@
   width: 15px;
   height: 15px;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

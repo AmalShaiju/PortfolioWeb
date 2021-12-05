@@ -1,0 +1,36 @@
+.quoteText {
+  padding: 0.5em;
+  font-family: LeagueGothic !important;
+  font-size: 65px;
+}
+
+.quoteText2BG {
+  fill: black;
+}
+
+#quote2Triangle {
+  fill: none;
+  stroke: #f2f2f2;
+  stroke-width: 15;
+  stroke-miterlimit: 10;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1000;
+}
+
+.quoteTextWrap svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.quoteText1BG {
+  fill: #fff;
+}
+
+.quote1Triangle {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1000;
+  fill: none;
+  stroke: #f2f2f2;
+  stroke-width: 15;
+}
