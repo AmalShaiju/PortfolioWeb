@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { QuotesComponent } from './quotes/quotes.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { QuotesComponent } from './quotes/quotes.component';
     IntroComponent,
     ProjectsComponent,
     AboutmeComponent,
-    QuotesComponent
+    QuotesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
