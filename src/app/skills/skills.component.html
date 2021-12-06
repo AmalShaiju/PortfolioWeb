@@ -1,0 +1,16 @@
+<section class="full-page section-skill">
+  <div class="xy-center h-100">
+    <h1 id="skill-title" class="title position-absolute">{{selectedSkillTitle}}</h1>
+    <div class="row w-100">
+      <div class="col-3"> </div>
+      <div class="col">
+        <div class="row m-auto">
+          <div class="col-3" *ngFor="let s of selectedSkillSet;">
+            <p class="fs-5 fw-bold">{{s.description}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="bg-black text-white p-2 fw-bolder position-absolute" style="bottom:2%; right:2%">SKILL SET</p>
+</section>

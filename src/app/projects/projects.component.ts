@@ -76,25 +76,25 @@ export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
 
       delay += (scrollprogress - delay) * accelamount;
       const tl = gsap.timeline();
-      tl.to("#lap1", { duration: 0.1, top: `${(500 - (4500 * delay))}px` });
-      tl.to("#lap2", { duration: 0.1, top: `${(700 - (4500 * delay))}px`});
-      tl.to("#lap3", { duration: 0.1, top: `${(1000 - (4500 * delay))}px` });
+      tl.to("#lap1", { duration: 0.1, top: `${(500 - (4500 * delay))}px` })
+        .to("#lap2", { duration: 0.1, top: `${(700 - (4500 * delay))}px` }, "<")
+        .to("#lap3", { duration: 0.1, top: `${(1000 - (4500 * delay))}px` }, "<")
 
-      tl.to("#lap4", { duration: 0.1, top: `${(1000 - (4500 * delay))}px` });
-      tl.to("#lap5", { duration: 0.1, top: `${(1200 - (4500 * delay))}px` });
-      tl.to("#lap6", { duration: 0.1, top: `${(1500 - (4500 * delay))}px` });
-      tl.to("#lap7", { duration: 0.1, top: `${(1700 - (4500 * delay))}px` });
+        .to("#lap4", { duration: 0.1, top: `${(1000 - (4500 * delay))}px` }, "<")
+        .to("#lap5", { duration: 0.1, top: `${(1200 - (4500 * delay))}px` }, "<")
+        .to("#lap6", { duration: 0.1, top: `${(1500 - (4500 * delay))}px` }, "<")
+        .to("#lap7", { duration: 0.1, top: `${(1700 - (4500 * delay))}px` }, "<")
 
-      tl.to("#lap8", { duration: 0.1, top: `${(2500 - (4500 * delay))}px` });
-      tl.to("#lap9", { duration: 0.1, top: `${(2700 - (4500 * delay))}px` });
-      tl.to("#lap10", { duration: 0.1, top: `${(3000 - (4500 * delay))}px` });
-      tl.to("#lap11", { duration: 0.1, top: `${(3200 - (4500 * delay))}px` });
+        .to("#lap8", { duration: 0.1, top: `${(2500 - (4500 * delay))}px` }, "<")
+        .to("#lap9", { duration: 0.1, top: `${(2700 - (4500 * delay))}px` }, "<")
+        .to("#lap10", { duration: 0.1, top: `${(3000 - (4500 * delay))}px` }, "<")
+        .to("#lap11", { duration: 0.1, top: `${(3200 - (4500 * delay))}px` }, "<")
 
-      tl.to("#lap12", { duration: 0.1, top: `${(3600 - (4500 * delay))}px` });
-      tl.to("#lap13", { duration: 0.1, top: `${(3800 - (4500 * delay))}px` });
-      tl.to("#lap15", { duration: 0.1, top: `${(4100 - (4500 * delay))}px` });
+        .to("#lap12", { duration: 0.1, top: `${(3600 - (4500 * delay))}px` }, "<")
+        .to("#lap13", { duration: 0.1, top: `${(3800 - (4500 * delay))}px` }, "<")
+        .to("#lap15", { duration: 0.1, top: `${(4100 - (4500 * delay))}px` }, "<")
 
-    }, 33.3)
+    },0.5)
   }
 
   ngOnDestroy(): void {
@@ -106,7 +106,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
     var s = document.querySelectorAll('.overlay-animated');
     s.forEach(p => {
       p.classList.remove('dark-overlay');
-      setInterval(() => { p.classList.add('dark-overlay'); },300)
+      setInterval(() => { p.classList.add('dark-overlay'); }, 300)
     });
   }
 

@@ -32,11 +32,11 @@ export class AboutmeComponent implements OnInit, AfterViewInit {
     const tl = gsap.timeline();
 
     this.scene.on("enter", e => {
-      tl.fromTo(".title", { duration: 0.1, left:'-15rem' }, { duration: 1, left:'10rem' });
+      tl.fromTo("#aboutme-title", { duration: 0.1, left:'-15rem' }, { duration: 1, left:'10rem' });
     })
 
     this.scene.on("leave", e => {
-      tl.to(".title", { duration: 1, left:'-15rem' });
+      tl.to("#aboutme-title", { duration: 1, left:'-15rem' });
     })
     
   }

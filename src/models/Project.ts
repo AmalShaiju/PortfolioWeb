@@ -8,8 +8,9 @@ export class Project {
   githubUrl: string;
   websiteUrl: string;
   technologiesUsed: string[];
+  skillAcquired: string;
 
-  constructor(index: number, title: string, primaryRole: string, secondaryRole: string = null, description: string, type: string, githubUrl: string, websiteUrl: string,technologiesUsed: string[]) {
+  constructor(index: number, title: string, primaryRole: string, secondaryRole: string = null, description: string, type: string, githubUrl: string, websiteUrl: string, technologiesUsed: string[], skillAcquired: string) {
     this.index = index;
     this.title = title;
     this.primaryRole = primaryRole;
@@ -19,5 +20,6 @@ export class Project {
     this.githubUrl = githubUrl;
     this.websiteUrl = websiteUrl;
     this.technologiesUsed = technologiesUsed;
+    this.skillAcquired = skillAcquired;
   }
 }
