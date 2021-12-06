@@ -55,39 +55,37 @@ export class SkillsComponent implements OnInit, AfterViewInit {
 
     this.scene.on("progress", e => {
       const oldTitle = this.selectedSkillTitle;
-      let newTitle = "";
 
-      if (e.progress <= 0.16) {
+      if (e.progress <= 0.14) {
         this.selectedSkillSet = this.frontEnd;
         this.selectedSkillTitle = "FRONT END"
-        newTitle = "FRONT END";
       }
-      else if (e.progress > 0.16 && e.progress <= 0.32) {
+      else if (e.progress > 0.14 && e.progress <= 0.28) {
         this.selectedSkillSet = this.backEnd;
         this.selectedSkillTitle = "BACK END"
-        newTitle = "BACK END";
       }
-      else if (e.progress > 0.28 && e.progress <= 0.48) {
+      else if (e.progress > 0.28 && e.progress <= 0.42) {
         this.selectedSkillSet = this.database;
         this.selectedSkillTitle = "DATABASE";
-        newTitle = "DATABASE";
       }
-      else if (e.progress > 0.42 && e.progress <= 0.64) {
+      else if (e.progress > 0.42 && e.progress <= 0.56) {
         this.selectedSkillSet = this.mobile;
         this.selectedSkillTitle = "MOBILE"
-        newTitle = "MOBILE";
       }
-      else if (e.progress > 0.56 && e.progress <= 0.80) {
+      else if (e.progress > 0.56 && e.progress <= 0.70) {
+        this.selectedSkillSet = this.tool;
+        this.selectedSkillTitle = "TOOLS";
+      }
+      else if (e.progress > 0.70 && e.progress <= 0.84) {
         this.selectedSkillSet = this.professional;
         this.selectedSkillTitle = "PROFESSIONAL"
-        newTitle = "PROFESSIONAL";
       }
-      else if (e.progress > 0.80) {
+      else if (e.progress > 0.85) {
         this.selectedSkillSet = this.soft;
         this.selectedSkillTitle = "PERSONAL"
-        newTitle = "PERSONAL"
       }
-      if (oldTitle != newTitle) {
+
+      if (oldTitle != this.selectedSkillTitle) {
         this.animateTitle();
       }
     })
