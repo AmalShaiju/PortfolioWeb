@@ -24,7 +24,7 @@ export class QuotesComponent implements OnInit, AfterViewInit {
       duration: 0,
       triggerElement: quoteTwo,
       triggerHook: 0
-    }).addIndicators()
+    })
       .addTo(this.controller);
 
     const tl = gsap.timeline();

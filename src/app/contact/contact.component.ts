@@ -25,7 +25,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       duration: 0,
       triggerElement: contactSection,
       triggerHook: 0
-    }).addIndicators()
+    })
       .setPin(contactSection)
       .addTo(this.controller);
 

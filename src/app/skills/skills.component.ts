@@ -48,7 +48,7 @@ export class SkillsComponent implements OnInit, AfterViewInit {
       duration: 1000,
       triggerElement: skillSection,
       triggerHook: 0
-    }).addIndicators()
+    })
       .setPin(skillSection)
       .addTo(this.controller);
 

@@ -13,17 +13,6 @@ export class IntroComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-  //  const intro = document.querySelector('.intro');
-  //  const controller = new ScrollMagic.Controller();
-  //  const scene = new ScrollMagic.Scene({
-  //    duration: 1000,
-  //    triggerElement: intro,
-  //    triggerHook: 0
-  //  }).addIndicators()
-  //    .setPin(intro)
-  //    .addTo(controller);
-
-   
   }
 
   ngAfterViewInit(): void {

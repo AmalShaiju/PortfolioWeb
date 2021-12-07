@@ -27,7 +27,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
       duration: 4500,
       triggerElement: projectSection,
       triggerHook: 0
-    }).addIndicators()
+    })
       .setPin(projectSection)
       .addTo(this.controller);
 
